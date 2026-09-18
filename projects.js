@@ -70,7 +70,7 @@ function renderProjects() {
           "<h4>Example tasks</h4>" +
           "<ul>" + p.tasks.map(function (t) { return "<li>" + t + "</li>"; }).join("") + "</ul>" +
         "</div>" +
-        '<a href="index.html#join" class="btn btn-primary">Express Interest</a>' +
+        '<a href="contribute.html" class="btn btn-primary">Express Interest</a>' +
       "</article>"
     );
   }).join("");

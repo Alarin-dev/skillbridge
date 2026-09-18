@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as a Contributor — SkillBridge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">SkillBridge</a>
+      <nav class="main-nav">
+        <a href="projects.html">Projects</a>
+        <a href="profiles.html">Profiles</a>
+      </nav>
+      <a href="contribute.html" class="btn btn-primary btn-small">Join Now</a>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <section class="section form-intro">
+    <div class="container">
+      <h1>Join as a Contributor</h1>
+      <p class="section-lead">
+        Tell us a bit about yourself. This helps us match you with projects that fit your skills and the time you have.
+      </p>
+
+      <div class="prototype-notice" role="note">
+        <strong>This form is a working prototype.</strong>
+        Submitting it does not send your information anywhere or store it on a server —
+        everything happens in your browser only. Once SkillBridge connects a real form
+        service, this notice will be replaced with real submission handling.
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="section form-section">
+    <div class="container">
+
+      <!--
+        TODO (future task): point this form at a free external form service
+        (e.g. Formspree) by setting a real "action" URL and removing the
+        JS preventDefault() in script.js. Field names are already set up
+        to be service-friendly.
+      -->
+      <form id="interest-form" novalidate>
+
+        <div id="form-error-summary" class="form-error-summary" role="alert" hidden>
+          Please fix the highlighted fields below before submitting.
+        </div>
+
+        <div class="form-field">
+          <label for="name">Preferred display name <span class="required-mark">*</span></label>
+          <input type="text" id="name" name="name" aria-required="true" aria-describedby="name-error">
+          <span id="name-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email <span class="required-mark">*</span></label>
+          <input type="email" id="email" name="email" aria-required="true" aria-describedby="email-error">
+          <span id="email-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="role">Main role or skill area <span class="required-mark">*</span></label>
+          <select id="role" name="role" aria-required="true" aria-describedby="role-error">
+            <option value="">Select one</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+            <option value="product">Product</option>
+            <option value="marketing-community">Marketing / Community</option>
+            <option value="other">Other</option>
+          </select>
+          <span id="role-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="experience">Current experience level <span class="required-mark">*</span></label>
+          <select id="experience" name="experience" aria-required="true" aria-describedby="experience-error">
+            <option value="">Select one</option>
+            <option value="beginner">Beginner — no real project experience yet</option>
+            <option value="some">Some experience — personal projects only</option>
+            <option value="intermediate">Intermediate — some real-world experience</option>
+          </select>
+          <span id="experience-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="skills">Skills and interests <span class="required-mark">*</span></label>
+          <textarea id="skills" name="skills" rows="3" aria-required="true" aria-describedby="skills-error"></textarea>
+          <span id="skills-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="learn">What do you want to learn?</label>
+          <textarea id="learn" name="learn" rows="3" aria-describedby="learn-error"></textarea>
+          <span id="learn-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="availability">Weekly availability <span class="required-mark">*</span></label>
+          <select id="availability" name="availability" aria-required="true" aria-describedby="availability-error">
+            <option value="">Select one</option>
+            <option value="1-2">1–2 hrs/week</option>
+            <option value="3-5">3–5 hrs/week</option>
+            <option value="6-10">6–10 hrs/week</option>
+            <option value="10+">10+ hrs/week</option>
+          </select>
+          <span id="availability-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="why">Why do you want to join? <span class="required-mark">*</span></label>
+          <textarea id="why" name="why" rows="3" aria-required="true" aria-describedby="why-error"></textarea>
+          <span id="why-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="portfolio">Portfolio or social link (optional)</label>
+          <input type="text" id="portfolio" name="portfolio" placeholder="https://..." aria-describedby="portfolio-error">
+          <span id="portfolio-error" class="field-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Interest</button>
+      </form>
+
+      <!-- Confirmation state, hidden until a valid submission -->
+      <div id="confirmation" class="confirmation" hidden tabindex="-1">
+        <h2>Thanks, <span id="confirmation-name"></span>.</h2>
+        <p>Your interest has been recorded in this browser session only — remember, this is a prototype, so nothing was sent to a server or stored anywhere.</p>
+        <p>When SkillBridge connects a real form service, submissions like yours will reach the team directly.</p>
+        <a href="index.html" class="btn btn-secondary">Back to home</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo logo-small">SkillBridge</div>
+      <p class="footer-copy">&copy; 2026 SkillBridge. Built by people who are done waiting.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

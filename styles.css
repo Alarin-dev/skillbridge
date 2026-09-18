@@ -557,3 +557,133 @@ a:focus-visible,
     padding: 24px;
   }
 }
+
+/* ---------- Contributor form ---------- */
+.form-intro {
+  padding-bottom: 32px;
+}
+
+.form-intro h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.prototype-notice {
+  margin-top: 32px;
+  border: 1px solid #d97b29;
+  padding: 16px 20px;
+  font-size: 0.95rem;
+  color: #333;
+  max-width: 640px;
+}
+
+.form-section {
+  padding-top: 0;
+}
+
+#interest-form {
+  max-width: 560px;
+}
+
+.form-error-summary {
+  border: 1px solid #b00020;
+  color: #b00020;
+  padding: 14px 18px;
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+.form-field {
+  margin-bottom: 28px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.required-mark {
+  color: #d97b29;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #999;
+  background: #fff;
+  color: #111;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid #d97b29;
+  outline-offset: 2px;
+  border-color: #d97b29;
+}
+
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
+  border-color: #b00020;
+}
+
+.field-error {
+  display: block;
+  color: #b00020;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  min-height: 1.2em;
+}
+
+.confirmation {
+  max-width: 560px;
+  border: 1px solid #ddd;
+  padding: 32px;
+}
+
+.confirmation h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.confirmation p {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .confirmation,
+  .prototype-notice {
+    padding: 20px;
+  }
+}
+
+/* ---------- Checkbox field (project form) ---------- */
+.form-field-checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.form-field-checkbox input[type="checkbox"] {
+  width: auto;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.form-field-checkbox input[type="checkbox"]:focus-visible {
+  outline: 2px solid #d97b29;
+  outline-offset: 2px;
+}

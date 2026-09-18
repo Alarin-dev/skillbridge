@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Project — SkillBridge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">SkillBridge</a>
+      <nav class="main-nav">
+        <a href="projects.html">Projects</a>
+        <a href="profiles.html">Profiles</a>
+        <a href="submit-project.html">For Founders</a>
+      </nav>
+      <a href="contribute.html" class="btn btn-primary btn-small">Join Now</a>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <section class="section form-intro">
+    <div class="container">
+      <h1>Submit a Project</h1>
+      <p class="section-lead">
+        Bring your early-stage idea to SkillBridge. Tell us what you're building and what
+        kind of contributors would help — every project is reviewed before it's accepted.
+      </p>
+
+      <div class="prototype-notice" role="note">
+        <strong>This form is a working prototype.</strong>
+        Submitting it does not send your information anywhere or store it on a server —
+        everything happens in your browser only. Once SkillBridge connects a real form
+        service, submissions will go through an actual review process.
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="section form-section">
+    <div class="container">
+
+      <!--
+        TODO (future task): point this form at a free external form service
+        (e.g. Formspree) by setting a real "action" URL and removing the
+        JS preventDefault() in script.js. Field names are already service-friendly.
+      -->
+      <form id="project-form" novalidate>
+
+        <div id="project-form-error-summary" class="form-error-summary" role="alert" hidden>
+          Please fix the highlighted fields below before submitting.
+        </div>
+
+        <div class="form-field">
+          <label for="p-name">Your name <span class="required-mark">*</span></label>
+          <input type="text" id="p-name" name="name" aria-required="true" aria-describedby="p-name-error">
+          <span id="p-name-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-email">Email <span class="required-mark">*</span></label>
+          <input type="email" id="p-email" name="email" aria-required="true" aria-describedby="p-email-error">
+          <span id="p-email-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-project-name">Project name <span class="required-mark">*</span></label>
+          <input type="text" id="p-project-name" name="projectName" aria-required="true" aria-describedby="p-project-name-error">
+          <span id="p-project-name-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-description">Project description <span class="required-mark">*</span></label>
+          <textarea id="p-description" name="description" rows="3" aria-required="true" aria-describedby="p-description-error"></textarea>
+          <span id="p-description-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-stage">Current stage <span class="required-mark">*</span></label>
+          <select id="p-stage" name="stage" aria-required="true" aria-describedby="p-stage-error">
+            <option value="">Select one</option>
+            <option value="idea">Idea / early planning</option>
+            <option value="prototype">Prototype</option>
+            <option value="mvp">MVP / pre-launch</option>
+            <option value="launched">Launched, early traction</option>
+          </select>
+          <span id="p-stage-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-goal">What is the project trying to achieve? <span class="required-mark">*</span></label>
+          <textarea id="p-goal" name="goal" rows="3" aria-required="true" aria-describedby="p-goal-error"></textarea>
+          <span id="p-goal-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-roles">Contributor roles needed <span class="required-mark">*</span></label>
+          <textarea id="p-roles" name="roles" rows="2" placeholder="e.g. Frontend developer, UI designer" aria-required="true" aria-describedby="p-roles-error"></textarea>
+          <span id="p-roles-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-tasks">Example meaningful tasks <span class="required-mark">*</span></label>
+          <textarea id="p-tasks" name="tasks" rows="3" placeholder="e.g. Build the signup flow, design the logo, write launch copy" aria-required="true" aria-describedby="p-tasks-error"></textarea>
+          <span id="p-tasks-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-time">Expected weekly time commitment <span class="required-mark">*</span></label>
+          <select id="p-time" name="timeCommitment" aria-required="true" aria-describedby="p-time-error">
+            <option value="">Select one</option>
+            <option value="1-2">1–2 hrs/week</option>
+            <option value="3-5">3–5 hrs/week</option>
+            <option value="6-10">6–10 hrs/week</option>
+            <option value="10+">10+ hrs/week</option>
+          </select>
+          <span id="p-time-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="p-value">How will this project provide useful experience and feedback? <span class="required-mark">*</span></label>
+          <textarea id="p-value" name="value" rows="3" aria-required="true" aria-describedby="p-value-error"></textarea>
+          <span id="p-value-error" class="field-error" role="alert"></span>
+        </div>
+
+        <div class="form-field form-field-checkbox">
+          <label for="p-respectful">
+            <input type="checkbox" id="p-respectful" name="respectful" aria-required="true" aria-describedby="p-respectful-error">
+            I can support a respectful, collaborative environment for contributors. <span class="required-mark">*</span>
+          </label>
+          <span id="p-respectful-error" class="field-error" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Project</button>
+      </form>
+
+      <!-- Confirmation state, hidden until a valid submission -->
+      <div id="project-confirmation" class="confirmation" hidden tabindex="-1">
+        <h2>Thanks, <span id="project-confirmation-name"></span>.</h2>
+        <p>Your project details have been recorded in this browser session only — this is a prototype, so nothing was sent to a server or stored anywhere.</p>
+        <p>When SkillBridge connects a real form service, submitted projects will go through a review process before being listed publicly.</p>
+        <a href="index.html" class="btn btn-secondary">Back to home</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo logo-small">SkillBridge</div>
+      <p class="footer-copy">&copy; 2026 SkillBridge. Built by people who are done waiting.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
