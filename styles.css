@@ -687,3 +687,37 @@ a:focus-visible,
   outline: 2px solid #d97b29;
   outline-offset: 2px;
 }
+
+/* ---------- Footer navigation ---------- */
+.footer-inner {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.footer-nav a:hover {
+  color: #d97b29;
+}
+
+@media (min-width: 640px) {
+  .footer-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-nav {
+    order: 2;
+  }
+
+  .footer-copy {
+    order: 3;
+  }
+}
