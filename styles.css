@@ -324,3 +324,135 @@ a:focus-visible,
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ---------- Projects page ---------- */
+.projects-intro {
+  padding-bottom: 48px;
+}
+
+.projects-intro h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.projects-section {
+  padding-top: 0;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 32px;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.project-card-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border: 1px solid #999;
+  color: #555;
+  white-space: nowrap;
+}
+
+.status-badge.status-actively-recruiting {
+  border-color: #d97b29;
+  color: #d97b29;
+}
+
+.status-badge.status-paused {
+  border-color: #999;
+  color: #999;
+}
+
+.project-desc {
+  color: #333;
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+.project-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.project-meta dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.project-meta dd {
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.project-roles,
+.project-tasks {
+  margin-bottom: 20px;
+}
+
+.project-roles h4,
+.project-tasks h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.tag-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.tag-list li {
+  border: 1px solid #111;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.project-tasks ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+.project-tasks li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    padding: 24px;
+  }
+
+  .project-meta {
+    gap: 20px;
+  }
+}
