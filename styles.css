@@ -456,3 +456,104 @@ a:focus-visible,
     gap: 20px;
   }
 }
+
+/* ---------- Profiles page ---------- */
+.profiles-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.profile-card {
+  border: 1px solid #ddd;
+  padding: 32px;
+}
+
+.profile-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.profile-card-header h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+
+.role-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border: 1px solid #d97b29;
+  color: #d97b29;
+  white-space: nowrap;
+}
+
+.profile-intro {
+  color: #333;
+  max-width: 640px;
+}
+
+.profile-details {
+  margin-top: 16px;
+}
+
+.profile-details summary {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #d97b29;
+  font-weight: 700;
+  padding: 6px 0;
+}
+
+.profile-details summary:focus-visible {
+  outline: 2px solid #d97b29;
+  outline-offset: 3px;
+}
+
+.profile-details-inner {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.profile-block {
+  margin-bottom: 20px;
+}
+
+.profile-block:last-child {
+  margin-bottom: 0;
+}
+
+.profile-block h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.profile-block ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+.profile-block li {
+  margin-bottom: 4px;
+}
+
+.portfolio-placeholder {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .profile-card {
+    padding: 24px;
+  }
+}
